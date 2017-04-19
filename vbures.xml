@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <?xml-stylesheet type="text/xsl" href="eduard_linhart.xsl"?>
+  <!-- Odkaz na github: https://github.com/xburv005/Adresare.git --> 
+<Adresare_konfigurace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Vojtěch_Bureš.xsd">
+
+<!-- Obecné nastavení -->
+<nastaveni-obecne>
+	<charset>utf-8</charset>
+	<jazyk>CZ</jazyk>
+	<javascript>1</javascript>
+	<vbscript>0</vbscript>
+	<nastaveni-moduly>
+		<komentare>1</komentare>
+		<vyhledavani>1</vyhledavani>
+		<online-ctecka>0</online-ctecka>
+		<hodnoceni-knih>0</hodnoceni-knih>
+	</nastaveni-moduly>
+	<protokol>http</protokol>
+	<omezeni-pristupu></omezeni-pristupu>	
+	<kontakt-admin>admin@eknihovna.cz</kontakt-admin>
+</nastaveni-obecne>
+
+<!-- Nastavení pravomocí uživatelů -->
+<tabulka-prav>
+	<Pravo Pnazev="host">
+		<mira-opravneni>0</mira-opravneni>
+		<cteni-z>1</cteni-z>
+		<navrh-z>0</navrh-z>
+		<pridavani-z>0</pridavani-z>
+		<mazani-z>0</mazani-z>
+		<sprava-uziv>0</sprava-uziv>
+		<uprava-sekci>0</uprava-sekci>
+	</Pravo>
+	<Pravo Pnazev="Registrovaný uživatel">
+		<mira-opravneni>1</mira-opravneni>
+		<cteni-z>1</cteni-z>
+		<navrh-z>1</navrh-z>
+		<pridavani-z>0</pridavani-z>
+		<mazani-z>0</mazani-z>
+		<sprava-uziv>0</sprava-uziv>
+		<uprava-sekci>0</uprava-sekci>
+	</Pravo>
+	<Pravo Pnazev="Knihovník">
+		<mira-opravneni>2</mira-opravneni>
+		<cteni-z>1</cteni-z>
+		<navrh-z>0</navrh-z>
+		<pridavani-z>1</pridavani-z>
+		<mazani-z>1</mazani-z>
+		<sprava-uziv>0</sprava-uziv>
+		<uprava-sekci>0</uprava-sekci>
+	</Pravo>
+	<Pravo Pnazev="Administrátor">
+		<mira-opravneni>3</mira-opravneni>
+		<cteni-z>1</cteni-z>
+		<navrh-z>0</navrh-z>
+		<pridavani-z>1</pridavani-z>
+		<mazani-z>1</mazani-z>
+		<sprava-uziv>1</sprava-uziv>
+		<uprava-sekci>1</uprava-sekci>
+	</Pravo>
+</tabulka-prav>
+
+<!-- Nastavení Oddělení 1. -->
+  <Oddeleni Onazev="Anekdoty">
+  	<pocet-zaznamu-na-stranku>25</pocet-zaznamu-na-stranku>
+  	<Popis>Knihy se vtipnou tématikou.</Popis>
+  	<Vek-omezeni>0</Vek-omezeni>
+  		<Pristupove-prava>
+  			<osoba id="0">
+  				<Jmeno>Návštěvník</Jmeno>
+  				<Prijmeni></Prijmeni>
+  				<Prihl-jmeno>guest</Prihl-jmeno>
+  				<Pravomoce>0</Pravomoce>
+  			</osoba>
+  			<osoba id="1">
+  				<Jmeno>Petr</Jmeno>
+  				<Prijmeni>Novák</Prijmeni>
+  				<Prihl-jmeno>admin</Prihl-jmeno>
+  				<Pravomoce>3</Pravomoce>
+  			</osoba>
+  			<osoba id="2">
+  				<Jmeno>Jana</Jmeno>
+  				<Prijmeni>Malá</Prijmeni>
+  				<Prihl-jmeno>Jama123</Prihl-jmeno>
+  				<Pravomoce>2</Pravomoce>
+  			</osoba>
+  			<osoba id="3">
+  				<Jmeno>Jan</Jmeno>
+  				<Prijmeni>Pechr</Prijmeni>
+  				<Prihl-jmeno>Pechros5</Prihl-jmeno>
+  				<Pravomoce>1</Pravomoce>
+  			</osoba>
+  			<osoba id="4">
+  				<Jmeno>Jiří</Jmeno>
+  				<Prijmeni>Linhart</Prijmeni>
+  				<Prihl-jmeno>linhy94</Prihl-jmeno>
+  				<Pravomoce>1</Pravomoce>
+  			</osoba>
+  		</Pristupove-prava>
+  </Oddeleni>
+
+  <!-- Oddělení 2. -->
+  <Oddeleni Onazev="Detektivky">
+  	<pocet-zaznamu-na-stranku>25</pocet-zaznamu-na-stranku>
+  	<Popis>Knihy zaměřené na detektivní vyšetřování a hádanky.</Popis>
+  	<Vek-omezeni>12</Vek-omezeni>
+  		<Pristupove-prava>
+  			<osoba id="0">
+  				<Jmeno>Návštěvník</Jmeno>
+  				<Prijmeni></Prijmeni>
+  				<Prihl-jmeno>guest</Prihl-jmeno>
+  				<Pravomoce>0</Pravomoce>
+  			</osoba>
+  			<osoba id="1">
+  				<Jmeno>Petr</Jmeno>
+  				<Prijmeni>Novák</Prijmeni>
+  				<Prihl-jmeno>admin</Prihl-jmeno>
+  				<Pravomoce>3</Pravomoce>
+  			</osoba>
+  			<osoba id="2">
+  				<Jmeno>Jana</Jmeno>
+  				<Prijmeni>Malá</Prijmeni>
+  				<Prihl-jmeno>Jama123</Prihl-jmeno>
+  				<Pravomoce>2</Pravomoce>
+  			</osoba>
+  			<osoba id="3">
+  				<Jmeno>Pavel</Jmeno>
+  				<Prijmeni>Havel</Prijmeni>
+  				<Prihl-jmeno>Hejvl0</Prihl-jmeno>
+  				<Pravomoce>1</Pravomoce>
+  			</osoba>
+  			<osoba id="4">
+  				<Jmeno>Michael</Jmeno>
+  				<Prijmeni>Veteška</Prijmeni>
+  				<Prihl-jmeno>SherlockHolmes2</Prihl-jmeno>
+  				<Pravomoce>1</Pravomoce>
+  			</osoba>
+  		</Pristupove-prava>
+  </Oddeleni>
+
+  <!-- Oddělení 3. -->
+  <Oddeleni Onazev="Dětská literatura">
+  	<pocet-zaznamu-na-stranku>25</pocet-zaznamu-na-stranku>
+  	<Popis>Knihy zaměřené pro děti.</Popis>
+  	<Vek-omezeni>0</Vek-omezeni>
+  		<Pristupove-prava>
+  			<osoba id="0">
+  				<Jmeno>Návštěvník</Jmeno>
+  				<Prijmeni></Prijmeni>
+  				<Prihl-jmeno>guest</Prihl-jmeno>
+  				<Pravomoce>0</Pravomoce>
+  			</osoba>
+  			<osoba id="1">
+  				<Jmeno>Petr</Jmeno>
+  				<Prijmeni>Novák</Prijmeni>
+  				<Prihl-jmeno>admin</Prihl-jmeno>
+  				<Pravomoce>3</Pravomoce>
+  			</osoba>
+  			<osoba id="2">
+  				<Jmeno>Petra</Jmeno>
+  				<Prijmeni>Malá</Prijmeni>
+  				<Prihl-jmeno>Pema321</Prihl-jmeno>
+  				<Pravomoce>2</Pravomoce>
+  			</osoba>
+  			<osoba id="3">
+  				<Jmeno>Andrej</Jmeno>
+  				<Prijmeni>Frič</Prijmeni>
+  				<Prihl-jmeno>Ajka25</Prihl-jmeno>
+  				<Pravomoce>1</Pravomoce>
+  			</osoba>
+  			<osoba id="4">
+  				<Jmeno>Ondřej</Jmeno>
+  				<Prijmeni>Marek</Prijmeni>
+  				<Prihl-jmeno>topr0</Prihl-jmeno>
+  				<Pravomoce>1</Pravomoce>
+  			</osoba>
+  		</Pristupove-prava>
+  </Oddeleni>
+
+  <!-- Oddělení 4. -->
+  <Oddeleni Onazev="Fantasy">
+  	<pocet-zaznamu-na-stranku>15</pocet-zaznamu-na-stranku>
+  	<Popis>Knihy zaměřené na mytologické či smyšlené příběhy.</Popis>
+  	<Vek-omezeni>13</Vek-omezeni>
+  		<Pristupove-prava>
+  			<osoba id="0">
+  				<Jmeno>Návštěvník</Jmeno>
+  				<Prijmeni></Prijmeni>
+  				<Prihl-jmeno>guest</Prihl-jmeno>
+  				<Pravomoce>0</Pravomoce>
+  			</osoba>
+  			<osoba id="1">
+  				<Jmeno>Petr</Jmeno>
+  				<Prijmeni>Novák</Prijmeni>
+  				<Prihl-jmeno>admin</Prihl-jmeno>
+  				<Pravomoce>3</Pravomoce>
+  			</osoba>
+  			<osoba id="2">
+  				<Jmeno>Petra</Jmeno>
+  				<Prijmeni>Malá</Prijmeni>
+  				<Prihl-jmeno>Pema321</Prihl-jmeno>
+  				<Pravomoce>2</Pravomoce>
+  			</osoba>
+  			<osoba id="3">
+  				<Jmeno>Pavel</Jmeno>
+  				<Prijmeni>Voráček</Prijmeni>
+  				<Prihl-jmeno>Mauron92</Prihl-jmeno>
+  				<Pravomoce>1</Pravomoce>
+  			</osoba>
+  			<osoba id="4">
+  				<Jmeno>David</Jmeno>
+  				<Prijmeni>Linger</Prijmeni>
+  				<Prihl-jmeno>Gandalf7</Prihl-jmeno>
+  				<Pravomoce>1</Pravomoce>
+  			</osoba>
+  		</Pristupove-prava>
+  </Oddeleni>
+
+  <!-- Oddělení 5. -->
+  <Oddeleni Onazev="Horory">
+  	<pocet-zaznamu-na-stranku>25</pocet-zaznamu-na-stranku>
+  	<Popis>Knihy s hororovou tématikou.</Popis>
+  	<Vek-omezeni>15</Vek-omezeni>
+  		<Pristupove-prava>
+  			<osoba id="0">
+  				<Jmeno>Návštěvník</Jmeno>
+  				<Prijmeni></Prijmeni>
+  				<Prihl-jmeno>guest</Prihl-jmeno>
+  				<Pravomoce>0</Pravomoce>
+  			</osoba>
+  			<osoba id="1">
+  				<Jmeno>Petr</Jmeno>
+  				<Prijmeni>Novák</Prijmeni>
+  				<Prihl-jmeno>admin</Prihl-jmeno>
+  				<Pravomoce>3</Pravomoce>
+  			</osoba>
+  			<osoba id="2">
+  				<Jmeno>Jana</Jmeno>
+  				<Prijmeni>Malá</Prijmeni>
+  				<Prihl-jmeno>Jama123</Prihl-jmeno>
+  				<Pravomoce>2</Pravomoce>
+  			</osoba>
+  			<osoba id="3">
+  				<Jmeno>Petra</Jmeno>
+  				<Prijmeni>Malá</Prijmeni>
+  				<Prihl-jmeno>Pema321</Prihl-jmeno>
+  				<Pravomoce>2</Pravomoce>
+  			</osoba>
+  			<osoba id="4">
+  				<Jmeno>Vojtěch</Jmeno>
+  				<Prijmeni>Urbánek</Prijmeni>
+  				<Prihl-jmeno>urbi2</Prihl-jmeno>
+  				<Pravomoce>1</Pravomoce>
+  			</osoba>
+  			<osoba id="5">
+  				<Jmeno>Eduard</Jmeno>
+  				<Prijmeni>Galaš</Prijmeni>
+  				<Prihl-jmeno>Galass5</Prihl-jmeno>
+  				<Pravomoce>1</Pravomoce>
+  			</osoba>
+  		</Pristupove-prava>
+  </Oddeleni>
+</Eknihovna_konfigurace>
