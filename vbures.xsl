@@ -1,27 +1,20 @@
-<?xml version="1.0"?>
-
-<!--
-    Document   : newstylesheet.xsl
-    Created on : 20. dubna 2017, 1:58
-    Author     : vojta
-    Description:
-        Purpose of transformation follows.
--->
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Odkaz na github: https://github.com/xburv005/Adresar --> 
+<!-- Vybrání všech uživatelů, kteří mají přístupové práva vyší nebo rovny dvoumi, a transformace do JSON -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-    <xsl:output method="html"/>
-
-    <!-- TODO customize transformation rules 
-         syntax recommendation http://www.w3.org/TR/xslt 
-    -->
-    <xsl:template match="/">
-        <html>
-            <head>
-                <title>newstylesheet.xsl</title>
-            </head>
-            <body>
-            </body>
-        </html>
-    </xsl:template>
-
+	<xsl:output method="text"/>
+	<xsl:template match="/">
+		[ 
+		<xsl:for-each select="Adresar_konfigurace/Oddeleni/Pristupova-prava/osoba[Pravomoce >= 2]"> 
+			<xsl:sort select="Jmeno" order="descending"/>
+			{
+			"Jméno": "<xsl:value-of select="Jmeno"/>",
+			"Príjmení": "<xsl:value-of select="Prijmeni"/>",
+			"ID": "<xsl:value-of select="@id"/>",
+      "KOD": "<xsl:value-of select="@kod"/>",
+			"Míra Oprávnění": "<xsl:value-of select="Pravomoce"/>",
+			}<xsl:if test="position() != last()">,</xsl:if>
+		</xsl:for-each>
+		] 
+	</xsl:template>
 </xsl:stylesheet>

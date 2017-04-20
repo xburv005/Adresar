@@ -1,12 +1,124 @@
-<?xml version="1.0"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-<xs:schema version="1.0"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="qualified">
-
+<!-- Odkaz na github: https://github.com/xburv005/Adresar --> 
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Adresar_konfigurace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nastaveni-obecne"> <!-- Obecné nastavení -->       
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="chars" name="charset"/>
+              <xs:element type="jaz" name="jazyk"/>
+              <xs:element type="vypzap" name="javascript"/>
+              <xs:element type="vypzap" name="vbscript"/>
+              <xs:element name="nastaveni-moduly">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="vypzap" name="komentare"/>
+                    <xs:element type="vypzap" name="vyhledavani"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="prot" name="protokol"/>
+              <xs:element type="xs:string" name="omezeni-pristupu"/>
+              <xs:element type="email" name="kontakt-admin"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element> <!-- Konec obecného nastavení -->
+        <xs:element name="tabulka-prav"> <!-- Nastavení práv --> 
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pravo" maxOccurs="unbounded" minOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="oprav" name="prava"/>
+                    <xs:element type="vypzap" name="cteni"/>
+                    <xs:element type="vypzap" name="zapis"/>
+                    <xs:element type="vypzap" name="pridavani"/>
+                    <xs:element type="vypzap" name="mazani"/>
+                    <xs:element type="vypzap" name="sprava-uziv"/>
+                    <xs:element type="vypzap" name="uprava-sekci"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Jmeno" use="required"/>
+                  <xs:attribute type="xs:string" name="Prikaz" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element> <!-- Konec Nastavení práv --> 
+        <xs:element name="Oddeleni" maxOccurs="unbounded" minOccurs="0"> <!-- Nastavení Oddělení --> 
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:integer" name="pocet-zaznamu-na-soubor"/>
+              <xs:element type="pop" name="Popis"/>
+              <xs:element name="Pristupova-prava">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="osoba" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Jmeno"/>
+                          <xs:element type="xs:string" name="Prijmeni"/>
+                          <xs:element type="xs:string" name="Prihl-jmeno"/>
+                          <xs:element type="oprav" name="Pravomoce"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:byte" name="id" use="required"/>
+                        <xs:attribute type="xs:byte" name="Kod" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="Nazev" use="required"/>
+            <xs:attribute type="xs:string" name="Disk" use="required"/>
+          </xs:complexType>
+        </xs:element> <!-- Konec nastavení oddělení práv --> 
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- Nastavení omezení -->
+  <xs:simpleType name="vypzap"> <!-- Omezení zapnuto/vypnuto -->
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="chars"> <!-- Omezení nastavení charsetu -->
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="utf-8"/>
+      <xs:enumeration value="windows-1258"/>
+      <xs:enumeration value="utf-7"/>
+      <xs:enumeration value="iso-8859"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="jaz"> <!-- Omezení nastavení jazyku -->
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CZ"/>
+      <xs:enumeration value="EN"/>
+      <xs:enumeration value="US"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="prot"> <!-- Omezení nastavení protokolů -->
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="http"/>
+      <xs:enumeration value="https"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="email"> <!-- Omezení nastavení emailových adres -->
+    <xs:restriction base="xs:string">
+       <xs:pattern value="[^@]+@[^\.]+\..+"/> <!-- Regex pro rozpoznání emailové adresy -->
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="oprav"><!-- Omezení nastavení oprávnění-->
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="3"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="pop"><!-- Omezení nastavení popisu sekce-->
+    <xs:restriction base="xs:string">
+    	<xs:minLength value="5"/>
+      	<xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType> 
 </xs:schema>
