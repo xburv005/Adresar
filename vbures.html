@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang='cs'>
   <head>
-  <!-- Odkaz na github: https://github.com/xburv005/Adresar --> 
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="Author" content="Bureš Vojtěch">
-  <title>Dokumentace Adresáře</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      </head>
+    <title>Adresar</title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='/favicon.png' rel='shortcut icon' type='image/png'>
+  </head>
   <body>
-  <div class="container">
+        <div class="container">      
+        <h3><span style="color: blue;">Obsah:</span></h3>
     <nav>
-      <h3><span style="color: blue;">Obsah:</span></h3>
+      
       <ul>
         <li><a href="#uvod">Úvod</a></li>
         <li><a href="#metodika">Metodika - Použité nástroje</a></li>
@@ -20,8 +22,8 @@
         <li><a href="#transf">Popis transformace</a></li>
         <li><a href="#zaver">Závěr</a></li>
       </ul>
-      <hr />
     </nav>
+    </div>
     <main>
       <section id="uvod">
         <article>
@@ -30,9 +32,9 @@
           </header>          
           <p>
           Jako téma semestrálního projektu jsem si vybral fiktivní počítačové adresáře.
-          Toto téma jsem si zvolil protože je v praxi často využívané ve firmách a podnicích.
+          Toto téma jsem si zvolil, protože je v praxi často využívané ve firmách a podnicích.
           </p>
-          <p>XML soubor slouží k obecné konfiguraci webové aplikace, k nastavení práv jednotlivých uživatelů, a konfiguraci jednotlivých sekcí Adresářů.</p> 
+          <p>XML soubor slouží k obecné konfiguraci webové aplikace, k nastavení práv jednotlivých uživatelů a konfiguraci jednotlivých sekcí Adresářů.</p> 
         </article>
       </section>
       <section id="metodika">
@@ -66,8 +68,8 @@
             </tr>
             <tr>                       
               <td>nastaveni-obecne</td>
-              <td>Obaluje obecné nastavení</td>
-              <td>Bez omezení (obal)</td>
+              <td>Zastřešuje obecné nastavení</td>
+              <td>Nemá omezení</td>
             </tr>
             <tr>                       
               <td>charset</td>
@@ -76,47 +78,37 @@
             </tr> 
             <tr>                       
               <td>jazyk</td>
-              <td>Určuje v jakém jazyku bude psaná aplikace</td>
+              <td>Určuje  jazyk užitý při psaní aplikace</td>
               <td>CZ, EN, US</td>
             </tr>
             <tr>                       
               <td>javascript</td>
-              <td>Určuje zda v aplikaci bude povolen javascript</td>
+              <td>Určuje jestli se v aplikaci dá využít javascript</td>
               <td>0, 1</td>
             </tr>
             <tr>                       
               <td>vbscript</td>
-              <td>Určuje zda v aplikaci bude povolen vbscript</td>
+              <td>Určuje jestli se v aplikaci dá využít vbscript</td>
               <td>0, 1</td>
             </tr>
             <tr>                       
               <td>nastaveni-modulu</td>
-              <td>Obaluje nastavení jednotlivých modulů, které mohou být součástí aplikace</td>
-              <td>Bez omezení (obal)</td>
+              <td>Zastřešuje nastavení jednotlivých modulů, které mohou být součástí aplikace</td>
+              <td>Nemá omezení</td>
             </tr>
             <tr>                       
               <td>komentare</td>
-              <td>Určuje zda v aplikaci bude povolen modul komentářů</td>
+              <td>Určuje jestli bude v aplikaci povolen modul komentářů</td>
               <td>0, 1</td>
             </tr>
             <tr>                       
               <td>vyhledavani</td>
-              <td>Určuje zda v aplikaci bude povolen modul vyhledávání</td>
-              <td>0, 1</td>
-            </tr>
-            <tr>                       
-              <td>online-ctectka</td>
-              <td>Určuje zda v aplikaci bude povolen modul pro podporu online čtení knih</td>
-              <td>0, 1</td>
-            </tr>
-            <tr>                       
-              <td>hodnoceni-knih</td>
-              <td>Určuje zda v aplikaci bude povolen modul pro umožnění hodnocení jednotlivých knih uživateli</td>
+              <td>Určuje jestli bude v aplikaci povolen modul vyhledávání</td>
               <td>0, 1</td>
             </tr> 
             <tr>                       
               <td>protokol</td>
-              <td>Určuje jaký bude použit protokol pro zobrazení aplikace</td>
+              <td>Určuje protokol pro zobrazení aplikace</td>
               <td>http, https</td>
             </tr>
             <tr>                       
@@ -126,83 +118,78 @@
             </tr>
             <tr>                       
               <td>kontakt-admin</td>
-              <td>Slouží k nastavení emailu správce aplikace, kterému je v případě problémů možno napsat email</td>
+              <td>Slouží k nastavení emailu odpovědné osoby za aplikaci, které je v případě problémů možno napsat email</td>
               <td>Regulární výraz ve schématu se stará o korektnost emailu</td>
             </tr>
             <tr>                       
               <td>tabulka-prav</td>
-              <td>Obaluje nastavení pravomocí uživatelů</td>
-              <td>Bez omezení (obal)</td>
+              <td>Zastřešuje nastavení pravomocí uživatelů</td>
+              <td>Nemá omezení</td>
             </tr>
             <tr>                       
               <td>Pravo</td>
-              <td>Obaluje a identifikuje za pomoci atributu PNazev jednotlivé pravomoce</td>
-              <td>Bez omezení (obal)</td>
+              <td>Zastřešuje a identifikuje za pomoci atributu Nazev jednotlivé pravomoce</td>
+              <td>Nemá omezení</td>
             </tr>
             <tr>                       
               <td>mira-opravneni</td>
-              <td>Určuje identifikační číslo oprávnění pro snadné přiřazení oprávnění uživateli</td>
+              <td>Určuje míru práv uživateli</td>
               <td>0, 1, 2, 3</td>
             </tr>
             <tr>                       
-              <td>cteni-z</td>
-              <td>Určuje zda uživatel s tímto oprávněním má povolení ke čtení záznamů (informací o knihách)</td>
+              <td>cteni</td>
+              <td>Určuje, zda uživatel s tímto oprávněním má povolení ke čtení adresářů</td>
               <td>0, 1</td>
             </tr>
             <tr>                       
-              <td>navrh-z</td>
-              <td>Určuje zda uživatel s tímto oprávněním má povolení k navrhování knih pro přidání do databáze</td>
+              <td>zapis</td>
+              <td>Určuje, zda uživatel s tímto oprávněním má povolení k zápisu do adresářů</td>
               <td>0, 1</td>
             </tr>
             <tr>                       
-              <td>pridavani-z</td>
-              <td>Určuje zda uživatel s tímto oprávněním má povolení ke přidávání záznamů do databáze (uznání návrhu, nebo přidání vlastního)</td>
+              <td>pridavani</td>
+              <td>Určuje, zda uživatel s tímto oprávněním má povolení k přidávání záznamů do databáze</td>
               <td>0, 1</td>
             </tr>
             <tr>                       
-              <td>pridavani-z</td>
-              <td>Určuje zda uživatel s tímto oprávněním má povolení k odstraňování záznamů z databáze</td>
+              <td>mazani</td>
+              <td>Určuje, zda uživatel s tímto oprávněním má povolení k odstraňování záznamů z databáze</td>
               <td>0, 1</td>
             </tr>
             <tr>                       
               <td>sprava-uziv</td>
-              <td>Určuje zda uživatel s tímto oprávněním má povolení k spravování jednotlivých uživatelů (restart hesla, změna údajů, zablokování uživatele)</td>
+              <td>Určuje, zda uživatel s tímto oprávněním může spravovat jednotlivé uživatele</td>
               <td>0, 1</td>
             </tr>
             <tr>                       
               <td>uprava-sekci</td>
-              <td>Určuje zda uživatel s tímto oprávněním má povolení k úpravě jednotlivých sekcí aplikace. Tím je myšleno například sekce žánrů</td>
+              <td>Určuje, zda uživatel s tímto oprávněním má povolení k úpravě jednotlivých sekcí aplikace.</td>
               <td>0, 1</td>
             </tr>
             <tr>                       
-              <td>Oddeleni</td>
-              <td>Obaluje nastavení jednotlivých oddělení aplikace</td>
-              <td>Bez omezení (obal)</td>
+              <td>Adresar</td>
+              <td>Zastřešuje nastavení jednotlivých adreářů aplikace</td>
+              <td>Nemá omezení</td>
             </tr>
             <tr>                       
-              <td>pocet-zaznamu-na-stranku</td>
-              <td>Určuje kolik knih či jiných záznamů bude vypsáno na jedné straně v dané sekci</td>
+              <td>pocet-zaznamu-na-soubor</td>
+              <td>Určuje, kolik položek bude vypsáno</td>
               <td>Musí být kladné číslo</td>
             </tr>
             <tr>                       
               <td>Popis</td>
-              <td>Určuje popis a charakteristiku dané sekce</td>
-              <td>Minimálně 10 znaků, maximálně 150 znaků</td>
+              <td>Určuje popis a charakteristiku daného souboru</td>
+              <td>Minimálně 5 znaků, maximálně 150 znaků</td>
             </tr>
             <tr>                       
-              <td>Vek-omezeni</td>
-              <td>Určuje od jaké věkové hranice je uživatelům povolen vstup do sekce. Pokud uživatel není zaregistrovaný, je mu umožněn vstup pouze do kategorií bez omezení</td>
-              <td>Číslo od 0 do 18, přičemž číslo udává věk uživatele nastavený v jeho profilu</td>
-            </tr>
-            <tr>                       
-              <td>Pristupove-prava</td>
-              <td>Obaluje nastavení speciálních uživatelských oprávnění pro danou sekci</td>
-              <td>Bez omezení (obal)</td>
+              <td>Pristupova-prava</td>
+              <td>Zastřešuje nastavení speciálních uživatelských oprávnění pro danou sekci</td>
+              <td>Nemá omezení</td>
             </tr>
             <tr>                       
               <td>osoba</td>
-              <td>Obaluje nastavení jednotlivých osob v dané sekci, a identifikuje osoby pomocí atributu id</td>
-              <td>Bez omezení (obal)</td>
+              <td>Zastřešuje nastavení jednotlivých osob v dané sekci, a identifikuje osoby pomocí jejich id</td>
+              <td>Nemá omezení</td>
             </tr>
             <tr>                       
               <td>Jmeno</td>
@@ -221,7 +208,7 @@
             </tr>
             <tr>                       
               <td>Pravomoce</td>
-              <td>Určuje míru oprávnění uživatele v dané sekci</td>
+              <td>Určuje práva uživatele v dané sekci</td>
               <td>0, 1, 2, 3 (odvíjí se od elementu mira-opravneni)</td>
             </tr>                                                     
           </table>
@@ -232,7 +219,7 @@
               <td>Popis atributu</td>
             </tr>
             <tr>                       
-              <td>Pnazev</td>
+              <td>Nazev</td>
               <td>Určuje název daného oprávnění</td>
             </tr>
             <tr>                       
@@ -240,8 +227,20 @@
               <td>Určuje identifikační číslo dané osoby</td>
             </tr>
             <tr>                       
-              <td>Onazev</td>
-              <td>Určuje název daného oddělení</td>
+              <td>Disk</td>
+              <td>Určuje název Disku na kterém je daný Adresář</td>
+            </tr>
+            <tr>                       
+              <td>Prikaz</td>
+              <td>Určuje Příkaz daných práv</td>
+            </tr>
+            <tr>                       
+              <td>Kód</td>
+              <td>Určuje kód dané Osoby</td>
+            </tr>
+            <tr>                       
+              <td>Jmeno</td>
+              <td>Určuje název dané Osoby</td>
             </tr>                      
           </table>
         </article>
@@ -251,8 +250,8 @@
           <header>
             <h2><span style="color: blue;">Popis transformace</span></h2>
           </header>
-          <p>Transformace pomocí cyklu <code>for-each</code> vybere, a pomocí <strong>JSON</strong> odešle informace o všech uživatelích, kteří mají míru přístupových práv vyšší nebo rovno
-          dvěmi, všechny informace seřadí podle příjmení uživatelů, a obsahuje test na zjištění zda údaj byl poslední, a případné doplnění čárky pro správnou syntaxi.</p>
+          <p>Transformace pomocí cyklu for-each vybere, a pomocí JSON odešle informace o všech uživatelích, kteří mají míru přístupových práv vyšší nebo rovno
+          dvěmi, všechny informace seřadí podle příjmení uživatelů.</p>
         </article>
       </section>
       <section id="zaver">
@@ -270,7 +269,5 @@
     <footer>
     <p>Autor: <strong>Vojtěch Bureš, xburv005</strong> => Česká Zemědělská univerzita Praha, dne 19.4.2017</p>
     </footer>
-    </div>
-    
   </body>
 </html>

@@ -5,7 +5,7 @@
 	<xsl:output method="text"/>
 	<xsl:template match="/">
 		[ 
-		<xsl:for-each select="Adresar_konfigurace/Oddeleni/Pristupova-prava/osoba[Pravomoce >= 2]"> 
+		<xsl:for-each select="Adresar_konfigurace/Adresar/Pristupova-prava/osoba[Pravomoce >= 2]"> 
 			<xsl:sort select="Jmeno" order="descending"/>
 			{
 			"Jméno": "<xsl:value-of select="Jmeno"/>",

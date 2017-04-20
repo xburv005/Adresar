@@ -59,7 +59,7 @@
 </tabulka-prav>
 
 <!-- Adresář PZ -->
-  <Oddeleni Nazev="Přijaté zakázky"  Disk="I">
+  <Adresar Nazev="Přijaté zakázky"  Disk="I">
   	<pocet-zaznamu-na-soubor>25</pocet-zaznamu-na-soubor>
   	<Popis>Seznam přijatých zakázek.</Popis>
   		<Pristupova-prava>
@@ -94,10 +94,10 @@
   				<Pravomoce>1</Pravomoce>
   			</osoba>
   		</Pristupova-prava>
-  </Oddeleni>
+  </Adresar>
 
   <!-- Adresář VZ -->
-  <Oddeleni Nazev="Vyřešené zakázky"  Disk="I">
+  <Adresar Nazev="Vyřešené zakázky"  Disk="I">
   	<pocet-zaznamu-na-soubor>25</pocet-zaznamu-na-soubor>
   	<Popis>Zakázky které již byli vyřešeny.</Popis>
   		<Pristupova-prava>
@@ -132,10 +132,10 @@
   				<Pravomoce>1</Pravomoce>
   			</osoba>
   		</Pristupova-prava>
-  </Oddeleni>
+  </Adresar>
 
   <!-- Adresář RE -->
-  <Oddeleni Nazev="Reklamace"  Disk="I">
+  <Adresar Nazev="Reklamace"  Disk="I">
   	<pocet-zaznamu-na-soubor>25</pocet-zaznamu-na-soubor>
   	<Popis>Zakázky které byli reklamované</Popis>
   		<Pristupova-prava>
@@ -170,10 +170,10 @@
   				<Pravomoce>1</Pravomoce>
   			</osoba>
   		</Pristupova-prava>
-  </Oddeleni>
+  </Adresar>
 
   <!-- Adresář NZ -->
-  <Oddeleni Nazev="Neplatné zakázky" Disk="I">
+  <Adresar Nazev="Neplatné zakázky" Disk="I">
   	<pocet-zaznamu-na-soubor>15</pocet-zaznamu-na-soubor>
   	<Popis>Špatně zadané zakázky</Popis>
   		<Pristupova-prava>
@@ -208,10 +208,10 @@
   				<Pravomoce>1</Pravomoce>
   			</osoba>
   		</Pristupova-prava>
-  </Oddeleni>
+  </Adresar>
 
   <!-- Adresář ZA -->
-  <Oddeleni Nazev="Zákazníci"  Disk="K">
+  <Adresar Nazev="Zákazníci"  Disk="K">
   	<pocet-zaznamu-na-soubor>25</pocet-zaznamu-na-soubor>
   	<Popis>Seznam zákazníků</Popis>
   		<Pristupova-prava>
@@ -246,5 +246,5 @@
   				<Pravomoce>1</Pravomoce>
   			</osoba>
   			  		</Pristupova-prava>
-  </Oddeleni>
+  </Adresar>
 </Adresar_konfigurace>

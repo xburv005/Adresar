@@ -45,7 +45,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element> <!-- Konec Nastavení práv --> 
-        <xs:element name="Oddeleni" maxOccurs="unbounded" minOccurs="0"> <!-- Nastavení Oddělení --> 
+        <xs:element name="Adresar" maxOccurs="unbounded" minOccurs="0"> <!-- Nastavení práv Adresáře --> 
           <xs:complexType>
             <xs:sequence>
               <xs:element type="xs:integer" name="pocet-zaznamu-na-soubor"/>
@@ -72,7 +72,7 @@
             <xs:attribute type="xs:string" name="Nazev" use="required"/>
             <xs:attribute type="xs:string" name="Disk" use="required"/>
           </xs:complexType>
-        </xs:element> <!-- Konec nastavení oddělení práv --> 
+        </xs:element> <!-- Konec nastavení  práv adresáře --> 
       </xs:sequence>
     </xs:complexType>
   </xs:element>
